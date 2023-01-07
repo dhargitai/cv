@@ -579,12 +579,6 @@ h3 em {
             'column1'
             'column2';
         grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-}
-
-@media (max-width: 1100px) {
-    .work-experience {
         gap: 0;
     }
 }
@@ -980,5 +974,30 @@ footer {
 
     footer {
         display: initial;
+    }
+
+    .work-experience {
+        grid-template-areas:
+            'work-experience-title work-experience-title'
+            'column1 column2';
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+
+    .work-experience h3 {
+        margin-bottom: initial;
+        margin-top: 1rem;
+    }
+
+    .work-experience > div:not(:last-of-type) article:last-of-type .duration::after {
+        border-right: var(--border-width) dashed var(--color-grey-200);
+    }
+
+    .work-experience > div:not(:first-of-type) {
+        padding-top: var(--continuity-padding);
+    }
+
+    .work-experience > div:not(:first-of-type) article:first-of-type::after {
+        display: block;
     }
 }
