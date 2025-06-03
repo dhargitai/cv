@@ -535,6 +535,10 @@ main {
     grid-area: work-experience;
 }
 
+.work-experience li {
+    margin-top: .5rem;
+}
+
 .hobby-freelance {
     grid-area: hobby-freelance;
 }
@@ -976,6 +980,10 @@ footer {
         display: initial;
     }
 
+    .profile-picture {
+        max-width: 80%;
+    }
+
     .work-experience {
         grid-template-areas:
             'work-experience-title work-experience-title'
@@ -999,5 +1007,9 @@ footer {
 
     .work-experience > div:not(:first-of-type) article:first-of-type::after {
         display: block;
+    }
+
+    .hobby-freelance {
+        margin-top: 4rem;
     }
 }
