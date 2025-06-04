@@ -972,7 +972,7 @@ footer {
         row-gap: 2rem;
     }
 
-    .noprint {
+    .noprint, article.noprint {
         display: none;
     }
 
