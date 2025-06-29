@@ -961,6 +961,10 @@ footer {
 }
 
 @media print {
+    html {
+        font-size: 12px;
+    }
+
     body {
         margin: 0 0 0 0;
         -webkit-print-color-adjust: exact !important;
@@ -977,19 +981,52 @@ footer {
     }
 
     footer {
-        display: initial;
+        display: block;
+        margin-top: 2rem;
+    }
+
+    .contact-details {
+        width: 35%;
+        margin-left: 250px;
+    }
+
+    .profile-info h3 {
+        display: none;
+    }
+
+    .profile-info {
+        margin-top: 2rem;
     }
 
     .profile-picture {
-        max-width: 80%;
+        position: absolute;
+        top: 110px;
+        left: 2.5rem;
+        justify-content: flex-start;
+        max-width: 172px;
+    }
+
+    .profile-picture::before {
+        top: -8px;
+        right: -8px;
+    }
+
+    .profile-picture::after {
+        display: none;
     }
 
     .work-experience {
         grid-template-areas:
-            'work-experience-title work-experience-title'
-            'column1 column2';
-        grid-template-columns: 1fr 1fr;
+            'work-experience-title'
+            'column1'
+            'column2';
+        grid-template-columns: 1fr;
         gap: 2rem;
+    }
+
+    .work-experience > div:first-of-type article:first-of-type .duration::before {
+        --big-bubble-size: 16px;
+        --border-width: 2px;
     }
 
     .work-experience h3 {
@@ -998,7 +1035,7 @@ footer {
     }
 
     .work-experience > div:not(:last-of-type) article:last-of-type .duration::after {
-        border-right: var(--border-width) dashed var(--color-grey-200);
+        border-right: var(--border-width) solid var(--color-grey-200);
     }
 
     .work-experience > div:not(:first-of-type) {
@@ -1010,6 +1047,10 @@ footer {
     }
 
     .hobby-freelance {
-        margin-top: 4rem;
+        margin-top: 2rem;
+    }
+
+    .hobby-freelance .project-details {
+        max-width: fit-content;
     }
 }
