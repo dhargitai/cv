@@ -898,7 +898,7 @@ h5 {
 
 .hobby-freelance .project-details {
     grid-area: project-details;
-    max-width: 40ch;
+    max-width: 80ch;
 }
 
 .hobby-freelance h4 {
