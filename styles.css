@@ -924,6 +924,8 @@ h5 {
 .testimonial {
     margin-top: 1.5rem;
     margin-bottom: 3.5rem;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .testimonial blockquote {
@@ -1069,5 +1071,18 @@ footer {
 
     .hobby-freelance .project-details {
         max-width: fit-content;
+    }
+
+    .testimonials {
+        margin-top: 5.2rem;
+    }
+
+    .testimonial {
+        margin-bottom: 2rem;
+    }
+
+    .testimonial blockquote {
+        font-size: var(--font-size-base);
+        line-height: var(--line-height-base);
     }
 }
