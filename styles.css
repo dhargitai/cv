@@ -442,7 +442,8 @@ main {
     grid-template-areas: 
         'profile-info picture'
         'work-experience work-experience'
-        'hobby-freelance hobby-freelance';
+        'hobby-freelance hobby-freelance'
+        'testimonials testimonials';
     align-items: center;
     margin-top: 5rem;
     row-gap: 4rem;
@@ -454,7 +455,8 @@ main {
             'picture'
             'profile-info'
             'work-experience'
-            'hobby-freelance';
+            'hobby-freelance'
+            'testimonials';
     }
 }
 
@@ -896,17 +898,32 @@ h5 {
     }
 }
 
+.hobby-freelance .project-details,
+.testimonials .testimonial {
+    max-width: 80ch;
+}
+
 .hobby-freelance .project-details {
     grid-area: project-details;
-    max-width: 80ch;
 }
 
 .hobby-freelance h4 {
     margin-bottom: 1rem;
 }
 
+.testimonials {
+    grid-area: testimonials;
+}
+
+.testimonials h4 {
+    font-weight: 800;
+    font-size: var(--font-size-lg);
+    line-height: var(--line-height-sm);
+}
+
 .testimonial {
     margin-top: 1.5rem;
+    margin-bottom: 3.5rem;
 }
 
 .testimonial blockquote {
@@ -1046,7 +1063,7 @@ footer {
         display: block;
     }
 
-    .hobby-freelance {
+    .hobby-freelance, .testimonials {
         margin-top: 2rem;
     }
 
